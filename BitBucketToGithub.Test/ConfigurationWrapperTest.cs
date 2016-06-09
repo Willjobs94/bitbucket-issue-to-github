@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BitbucketToGithub.Wrapper;
-using BitbucketToGithub.Wrapper.Contracts;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using BitbucketToGithub.Wrapper.Contracts;
 using Moq;
 using NUnit.Framework;
 using Assert = NUnit.Framework.Assert;
