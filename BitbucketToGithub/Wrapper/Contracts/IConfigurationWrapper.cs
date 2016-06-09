@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BitbucketToGithub.Wrapper.Contracts
 {
-    public interface IConfiguration
+    public interface IConfigurationWrapper
     {
-        BitBucketCredential BitBucketCredential { get; }
+        IBaseCredential BitBucketCredential { get;}
     }
 }

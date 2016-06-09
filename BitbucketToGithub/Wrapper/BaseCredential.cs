@@ -7,9 +7,9 @@ using BitbucketToGithub.Wrapper.Contracts;
 
 namespace BitbucketToGithub.Wrapper
 {
-    public class BaseCredential : IBaseCredential
+    public abstract class BaseCredential : IBaseCredential
     {
-        public BaseCredential(string credentialProviderName)
+        protected BaseCredential(string credentialProviderName)
         {
             _credentialProviderName = credentialProviderName;
         }
