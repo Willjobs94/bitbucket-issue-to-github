@@ -11,9 +11,6 @@ namespace BitbucketToGithub.Controllers
     {
         public ActionResult Index()
         {
-            var configurationWraper = new ConfigurationWrapper();
-
-            var bitbucketKey = configurationWraper.BitBucketCredential.Key;
             return View();
         }
 
