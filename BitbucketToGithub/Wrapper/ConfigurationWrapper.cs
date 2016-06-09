@@ -6,8 +6,8 @@ using BitbucketToGithub.Wrapper.Contracts;
 
 namespace BitbucketToGithub.Wrapper
 {
-    public class Configuration : IConfiguration
+    public class ConfigurationWrapper : IConfigurationWrapper
     {
-        public BitBucketCredential BitBucketCredential { get; }
+        public IBaseCredential BitBucketCredential { get; } = new BitBucketCredential();
     }
 }
