@@ -38,5 +38,4 @@ namespace BitBucketToGithub.Test
         }
 
     }
-
 }
