@@ -1,6 +1,3 @@
-# bitbucket-issue-to-github [![Build status](https://ci.appveyor.com/api/projects/status/iwh7ojb5336o0024/branch/develop?svg=true)](https://ci.appveyor.com/project/Willjobs94/bitbucket-issue-to-github/branch/develop)
-
-
 bitbucket-issue-to-github
 ==============
 [![Build status](https://ci.appveyor.com/api/projects/status/iwh7ojb5336o0024/branch/develop?svg=true)](https://ci.appveyor.com/project/Willjobs94/bitbucket-issue-to-github/branch/develop)
