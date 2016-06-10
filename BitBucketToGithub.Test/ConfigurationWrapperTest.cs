@@ -9,20 +9,13 @@ namespace BitBucketToGithub.Test
     [TestFixture]
     public class ConfigurationWrapperTest
     {
-        private Mock<IConfigurationWrapper> _configurationWrapper;
-
-        [SetUp]
-        public void SetUp()
-        {
-            _configurationWrapper = new Mock<IConfigurationWrapper>();
-        }
 
         [Test]
         public void ShouldGetBitBucketKey()
         {
             var sut = new ConfigurationWrapper();
 
-            var key = sut.BitBucketCredential.Key;
+            var key = sut.BitBucketKey;
 
             Assert.That(key, Is.EqualTo("BitBucketKey"));
         }
@@ -33,7 +26,7 @@ namespace BitBucketToGithub.Test
 
             var sut = new ConfigurationWrapper();
 
-            var secret = sut.BitBucketCredential.Secret;
+            var secret = sut.BitBucketSecret;
 
             Assert.That(secret, Is.EqualTo("BitBucketSecret"));
         }
