@@ -1,4 +1,5 @@
-﻿using BitbucketToGithub.Wrapper.Contracts;
+﻿using BitbucketToGithub.Wrapper;
+using BitbucketToGithub.Wrapper.Contracts;
 using Moq;
 using NUnit.Framework;
 using Assert = NUnit.Framework.Assert;
@@ -19,9 +20,9 @@ namespace BitBucketToGithub.Test
         [Test]
         public void ShouldGetBitBucketKey()
         {
-            _configurationWrapper.Setup(cm => cm.BitBucketCredential.Key).Returns("BitBucketKey");
+            var sut = new ConfigurationWrapper();
 
-            var key = _configurationWrapper.Object.BitBucketCredential.Key;
+            var key = sut.BitBucketCredential.Key;
 
             Assert.That(key, Is.EqualTo("BitBucketKey"));
         }
@@ -30,12 +31,11 @@ namespace BitBucketToGithub.Test
         public void ShouldGetBitBucketSecret()
         {
 
-            _configurationWrapper.Setup(cm => cm.BitBucketCredential.Secret).Returns("BitBucketSecret");
+            var sut = new ConfigurationWrapper();
 
-            var secret = _configurationWrapper.Object.BitBucketCredential.Secret;
+            var secret = sut.BitBucketCredential.Secret;
 
             Assert.That(secret, Is.EqualTo("BitBucketSecret"));
         }
-
     }
 }
