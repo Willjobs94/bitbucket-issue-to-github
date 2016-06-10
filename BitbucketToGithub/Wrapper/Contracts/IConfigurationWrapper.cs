@@ -2,6 +2,7 @@
 {
     public interface IConfigurationWrapper
     {
-        IBaseCredential BitBucketCredential { get;}
+        string BitBucketKey { get; }
+        string BitBucketSecret { get; }
     }
 }
