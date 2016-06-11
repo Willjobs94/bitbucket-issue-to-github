@@ -1,4 +1,6 @@
-﻿using BitbucketToGithub.Wrapper;
+﻿using BitbucketToGithub.AppServices;
+using BitbucketToGithub.AppServices.Contracts;
+using BitbucketToGithub.Wrapper;
 using BitbucketToGithub.Wrapper.Contracts;
 using Ninject.Modules;
 
@@ -9,6 +11,8 @@ namespace BitbucketToGithub.App_Start
         public override void Load()
         {
             Bind<IConfigurationWrapper>().To<ConfigurationWrapper>();
+
+            Bind<IBitBucketService>().To<BitBucketService>();
         }
     }
 }
