@@ -18,7 +18,7 @@ namespace BitbucketToGithub.Controllers
         // GET: BitBucket
         public ActionResult SignIn()
         {
-            return Redirect($"https://bitbucket.org/site/oauth2/access_token?client_id={_configurationWrapper.BitBucketKey}&response_type=code");
+            return Redirect($"https://bitbucket.org/site/oauth2/authorize?client_id={_configurationWrapper.BitBucketKey}&response_type=code");
         }
 
         // URL callback of bitbucket Authentication
