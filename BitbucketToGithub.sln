@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitbucketToGithub", "Bitbuc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBucketToGithub.Test", "BitBucketToGithub.Test\BitBucketToGithub.Test.csproj", "{D8668846-9352-4AF5-BB7E-1291FE00A49D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitbucketToGithub.AppServices", "BitbucketToGithub.AppServices\BitbucketToGithub.AppServices.csproj", "{C656C171-E2E4-43D0-B3A3-87711E3E9DF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D8668846-9352-4AF5-BB7E-1291FE00A49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8668846-9352-4AF5-BB7E-1291FE00A49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8668846-9352-4AF5-BB7E-1291FE00A49D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C656C171-E2E4-43D0-B3A3-87711E3E9DF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C656C171-E2E4-43D0-B3A3-87711E3E9DF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C656C171-E2E4-43D0-B3A3-87711E3E9DF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C656C171-E2E4-43D0-B3A3-87711E3E9DF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
