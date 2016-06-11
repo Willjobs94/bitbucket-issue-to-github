@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BitbucketToGithub.AppServices.Contracts;
 using BitbucketToGithub.Wrapper.Contracts;
 
 namespace BitbucketToGithub.Controllers
@@ -10,9 +11,10 @@ namespace BitbucketToGithub.Controllers
     public class BitBucketController : Controller
     {
 
-        public BitBucketController(IConfigurationWrapper configurationWrapper)
+        public BitBucketController(IConfigurationWrapper configurationWrapper, IBitBucketService bitBucketService)
         {
             _configurationWrapper = configurationWrapper;
+            _bitBucketService = bitBucketService;
         }
 
         // GET: BitBucket
@@ -24,12 +26,12 @@ namespace BitbucketToGithub.Controllers
         // URL callback of bitbucket Authentication
         public ActionResult GetCode(string code)
         {
-            accessToken = code;
+           var bitbucketAccess = _bitBucketService.GetAccessTokenByCode(code, _configurationWrapper.BitBucketKey,
+                _configurationWrapper.BitBucketSecret);
+
             return RedirectToAction("Index", "Home");
         }
-        private string accessToken = string.Empty;
-        private const string BaseBitbucketApiUrl = "https://api.bitbucket.org/2.0/";
         private readonly IConfigurationWrapper _configurationWrapper;
-
+        private readonly IBitBucketService _bitBucketService;
     }
 }
