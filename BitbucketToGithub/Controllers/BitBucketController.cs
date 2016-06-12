@@ -28,8 +28,7 @@ namespace BitbucketToGithub.Controllers
         {
            var bitbucketAccess = _bitBucketService.GetAccessTokenByCode(code, _configurationWrapper.BitBucketKey,
                 _configurationWrapper.BitBucketSecret);
-
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Home", new {bitbucketAuthenticated = true});
         }
         private readonly IConfigurationWrapper _configurationWrapper;
         private readonly IBitBucketService _bitBucketService;

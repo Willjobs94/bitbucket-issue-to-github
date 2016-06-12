@@ -16,6 +16,6 @@ namespace BitbucketToGithub.AppServices.Contracts
         /// <param name="bitbucketKey"></param>
         /// <param name="bitbucketSecret"></param>
         /// <returns></returns>
-        BitBucketCredentialResponse GetAccessTokenByCode(string code, string bitbucketKey, string bitbucketSecret);
+        BitBucketAccessTokenResponse GetAccessTokenByCode(string code, string bitbucketKey, string bitbucketSecret);
     }
 }

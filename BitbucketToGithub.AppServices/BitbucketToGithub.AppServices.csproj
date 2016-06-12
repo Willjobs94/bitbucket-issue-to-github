@@ -50,7 +50,11 @@
   <ItemGroup>
     <Compile Include="BitBucketService.cs" />
     <Compile Include="Contracts\IBitBucketService.cs" />
-    <Compile Include="DTOs\BitBucketCredentialResponse.cs" />
+    <Compile Include="Contracts\IGithubService.cs" />
+    <Compile Include="DTOs\BaseAccessTokenResponse.cs" />
+    <Compile Include="DTOs\BitBucketAccessTokenResponse.cs" />
+    <Compile Include="DTOs\GithubAccessTokenResponse.cs" />
+    <Compile Include="GithubService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
