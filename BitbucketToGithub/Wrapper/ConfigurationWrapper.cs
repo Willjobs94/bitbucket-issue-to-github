@@ -10,5 +10,11 @@ namespace BitbucketToGithub.Wrapper
 
         public string BitBucketSecret
             => ConfigurationManager.AppSettings["BitBucketSecret"];
+
+        public string GithubKey
+            => ConfigurationManager.AppSettings["GithubKey"];
+
+        public string GithubSecret
+            => ConfigurationManager.AppSettings["GithubSecret"];
     }
 }

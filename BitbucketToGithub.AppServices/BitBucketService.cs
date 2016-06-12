@@ -15,7 +15,7 @@ namespace BitbucketToGithub.AppServices
 {
     public class BitBucketService : IBitBucketService
     {
-        public BitBucketCredentialResponse GetAccessTokenByCode(string code, string bitbucketKey, string bitbucketSecret)
+        public BitBucketAccessTokenResponse GetAccessTokenByCode(string code, string bitbucketKey, string bitbucketSecret)
         {
 
             var client = new RestClient("https://bitbucket.org/")
@@ -29,7 +29,7 @@ namespace BitbucketToGithub.AppServices
             request.AddParameter("code", code);
 
             var content = client.Execute(request).Content;
-            var bitbucketCredentialResponse = JsonConvert.DeserializeObject<BitBucketCredentialResponse>(content, new JsonSerializerSettings()
+            var bitbucketCredentialResponse = JsonConvert.DeserializeObject<BitBucketAccessTokenResponse>(content, new JsonSerializerSettings()
             {
                 ContractResolver = new CamelCasePropertyNamesContractResolver()
             });
