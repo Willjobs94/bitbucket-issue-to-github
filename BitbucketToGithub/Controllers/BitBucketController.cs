@@ -1,36 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using BitbucketToGithub.AppServices.Contracts;
-using BitbucketToGithub.Wrapper.Contracts;
+using BitbucketToGithub.Utility.Contracts;
 
 namespace BitbucketToGithub.Controllers
 {
     public class BitBucketController : Controller
     {
+        private readonly IBitbucketService _bitbucketService;
+        private readonly IConfigurationWrapper _configurationWrapper;
 
-        public BitBucketController(IConfigurationWrapper configurationWrapper, IBitBucketService bitBucketService)
+        public BitBucketController(IConfigurationWrapper configurationWrapper, IBitbucketService bitbucketService)
         {
             _configurationWrapper = configurationWrapper;
-            _bitBucketService = bitBucketService;
+            _bitbucketService = bitbucketService;
         }
 
         // GET: BitBucket
         public ActionResult SignIn()
         {
-            return Redirect($"https://bitbucket.org/site/oauth2/authorize?client_id={_configurationWrapper.BitBucketKey}&response_type=code");
+            return
+                Redirect(
+                    $"https://bitbucket.org/site/oauth2/authorize?client_id={_configurationWrapper.BitBucketKey}&response_type=code");
         }
 
         // URL callback of bitbucket Authentication
         public ActionResult GetCode(string code)
         {
-           var bitbucketAccess = _bitBucketService.GetAccessTokenByCode(code, _configurationWrapper.BitBucketKey,
+            _bitbucketService.GetAccessTokenByCode(code, _configurationWrapper.BitBucketKey,
                 _configurationWrapper.BitBucketSecret);
             return RedirectToAction("Index", "Home", new {bitbucketAuthenticated = true});
         }
-        private readonly IConfigurationWrapper _configurationWrapper;
-        private readonly IBitBucketService _bitBucketService;
     }
 }

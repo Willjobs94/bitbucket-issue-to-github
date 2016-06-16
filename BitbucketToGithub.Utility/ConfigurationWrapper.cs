@@ -1,11 +1,11 @@
 ﻿using System.Configuration;
-using BitbucketToGithub.Wrapper.Contracts;
+using BitbucketToGithub.Utility.Contracts;
 
-namespace BitbucketToGithub.Wrapper
+namespace BitbucketToGithub.Utility
 {
     public class ConfigurationWrapper : IConfigurationWrapper
     {
-        public string BitBucketKey 
+        public string BitBucketKey
             => ConfigurationManager.AppSettings["BitBucketKey"];
 
         public string BitBucketSecret
