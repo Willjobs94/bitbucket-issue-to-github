@@ -15,7 +15,6 @@ namespace BitbucketToGithub.Utility
                 var basePath = AppDomain.CurrentDomain.BaseDirectory;
                 var basePathRegEx = new Regex(pattern);
                 return basePathRegEx.Replace(basePath, "");
-                ;
             }
         }
 
