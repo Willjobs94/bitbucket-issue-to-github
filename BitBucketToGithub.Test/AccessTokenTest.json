@@ -1,0 +1,14 @@
+{
+  "Bitbucket": {
+    "Refresh_Token": "345345345",
+    "Expires_In": "234234",
+    "Scopes": "her ehrer herer",
+    "Access_Token": "234rertert",
+    "Token_type": "berear"
+  },
+  "Github": {
+    "Scope": "fskjsdjf sdjfsjd ",
+    "Access_Token": "lskjflsjdlfjsdlfkf",
+    "Token_type": "berear"
+  }
+}

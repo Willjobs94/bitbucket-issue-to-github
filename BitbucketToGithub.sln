@@ -5,11 +5,17 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitbucketToGithub", "BitbucketToGithub\BitbucketToGithub.csproj", "{231CAE48-1815-4C8A-8AA1-B7F76F45851A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBucketToGithub.Test", "BitBucketToGithub.Test\BitBucketToGithub.Test.csproj", "{D8668846-9352-4AF5-BB7E-1291FE00A49D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitbucketToGithub.Test", "BitBucketToGithub.Test\BitbucketToGithub.Test.csproj", "{D8668846-9352-4AF5-BB7E-1291FE00A49D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitbucketToGithub.AppServices", "BitbucketToGithub.AppServices\BitbucketToGithub.AppServices.csproj", "{C656C171-E2E4-43D0-B3A3-87711E3E9DF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitBucketToGithub.Repository", "BitBucketToGithub.Repository\BitBucketToGithub.Repository.csproj", "{8BCE8E0F-0224-42D5-8E20-7F2F6396BD4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitbucketToGithub.Repository", "BitBucketToGithub.Repository\BitbucketToGithub.Repository.csproj", "{8BCE8E0F-0224-42D5-8E20-7F2F6396BD4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitbucketToGithub.Core", "BitbucketToGithub.Core\BitbucketToGithub.Core.csproj", "{1B1BF424-9B2D-4160-80E8-29C7797DFF69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitbucketToGithub.Data", "BitbucketToGithub.Data\BitbucketToGithub.Data.csproj", "{64D09080-08E9-4C3C-9940-4443302703A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitbucketToGithub.Utility", "BitbucketToGithub.Utility\BitbucketToGithub.Utility.csproj", "{8B47DB4D-9CD2-4738-94BD-6728EBC0B8A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{8BCE8E0F-0224-42D5-8E20-7F2F6396BD4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BCE8E0F-0224-42D5-8E20-7F2F6396BD4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BCE8E0F-0224-42D5-8E20-7F2F6396BD4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B1BF424-9B2D-4160-80E8-29C7797DFF69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B1BF424-9B2D-4160-80E8-29C7797DFF69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B1BF424-9B2D-4160-80E8-29C7797DFF69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B1BF424-9B2D-4160-80E8-29C7797DFF69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64D09080-08E9-4C3C-9940-4443302703A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64D09080-08E9-4C3C-9940-4443302703A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64D09080-08E9-4C3C-9940-4443302703A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64D09080-08E9-4C3C-9940-4443302703A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B47DB4D-9CD2-4738-94BD-6728EBC0B8A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B47DB4D-9CD2-4738-94BD-6728EBC0B8A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B47DB4D-9CD2-4738-94BD-6728EBC0B8A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B47DB4D-9CD2-4738-94BD-6728EBC0B8A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

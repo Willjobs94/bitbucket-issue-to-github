@@ -40,7 +40,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseResponseRepository.cs" />
+    <Compile Include="BitbucketResponseRepository.cs" />
+    <Compile Include="Contracts\IBaseResponseRepository.cs" />
+    <Compile Include="Contracts\IBitbucketResponseRepository.cs" />
+    <Compile Include="Contracts\IGithubResponseRepository.cs" />
+    <Compile Include="GithubResponseRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BitbucketToGithub.Core\BitbucketToGithub.Core.csproj">
+      <Project>{1b1bf424-9b2d-4160-80e8-29c7797dff69}</Project>
+      <Name>BitbucketToGithub.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BitbucketToGithub.Data\BitbucketToGithub.Data.csproj">
+      <Project>{64d09080-08e9-4c3c-9940-4443302703a7}</Project>
+      <Name>BitbucketToGithub.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BitbucketToGithub.Utility\BitbucketToGithub.Utility.csproj">
+      <Project>{8b47db4d-9cd2-4738-94bd-6728ebc0b8a1}</Project>
+      <Name>BitbucketToGithub.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

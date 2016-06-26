@@ -62,16 +62,31 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AccessTokenManagerTest.cs" />
     <Compile Include="ConfigurationWrapperTest.cs" />
+    <Compile Include="PathResolverTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BitbucketToGithub.Core\BitbucketToGithub.Core.csproj">
+      <Project>{1b1bf424-9b2d-4160-80e8-29c7797dff69}</Project>
+      <Name>BitbucketToGithub.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BitbucketToGithub.Data\BitbucketToGithub.Data.csproj">
+      <Project>{64d09080-08e9-4c3c-9940-4443302703a7}</Project>
+      <Name>BitbucketToGithub.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BitbucketToGithub.Utility\BitbucketToGithub.Utility.csproj">
+      <Project>{8B47DB4D-9CD2-4738-94BD-6728EBC0B8A1}</Project>
+      <Name>BitbucketToGithub.Utility</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BitbucketToGithub\BitbucketToGithub.csproj">
       <Project>{231cae48-1815-4c8a-8aa1-b7f76f45851a}</Project>
       <Name>BitbucketToGithub</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="AccessTokenTest.json" />
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>

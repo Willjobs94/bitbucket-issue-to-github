@@ -49,16 +49,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitBucketService.cs" />
-    <Compile Include="Contracts\IBitBucketService.cs" />
+    <Compile Include="Contracts\IAccessTokenService.cs" />
+    <Compile Include="Contracts\IBitbucketService.cs" />
     <Compile Include="Contracts\IGithubService.cs" />
-    <Compile Include="DTOs\BaseAccessTokenResponse.cs" />
-    <Compile Include="DTOs\BitBucketAccessTokenResponse.cs" />
-    <Compile Include="DTOs\GithubAccessTokenResponse.cs" />
     <Compile Include="GithubService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BitbucketToGithub.Core\BitbucketToGithub.Core.csproj">
+      <Project>{1b1bf424-9b2d-4160-80e8-29c7797dff69}</Project>
+      <Name>BitbucketToGithub.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BitBucketToGithub.Repository\BitbucketToGithub.Repository.csproj">
+      <Project>{8bce8e0f-0224-42d5-8e20-7f2f6396bd4b}</Project>
+      <Name>BitbucketToGithub.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -244,3 +244,4 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 /BitbucketToGithub/Auth.config
+/BitbucketToGithub.Data/AccessToken.json

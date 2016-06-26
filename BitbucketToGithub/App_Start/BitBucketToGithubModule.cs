@@ -1,9 +1,12 @@
 ﻿using BitbucketToGithub.AppServices;
 using BitbucketToGithub.AppServices.Contracts;
-using BitbucketToGithub.Wrapper;
-using BitbucketToGithub.Wrapper.Contracts;
+using BitbucketToGithub.Data;
+using BitbucketToGithub.Data.Contracts;
+using BitbucketToGithub.Utility;
+using BitbucketToGithub.Utility.Contracts;
+using BitBucketToGithub.Repository;
+using BitBucketToGithub.Repository.Contracts;
 using Ninject.Modules;
-using RestSharp;
 
 namespace BitbucketToGithub.App_Start
 {
@@ -11,10 +14,15 @@ namespace BitbucketToGithub.App_Start
     {
         public override void Load()
         {
-            Bind<IConfigurationWrapper>().To<ConfigurationWrapper>();
-
-            Bind<IBitBucketService>().To<BitBucketService>();
+            Bind<IBitbucketService>().To<BitbucketService>();
             Bind<IGithubService>().To<GithubService>();
+
+            Bind<IBitbucketResponseRepository>().To<BitbucketResponseRepository>();
+            Bind<IGithubResponseRepository>().To<GithubResponseRepository>();
+
+            Bind<IConfigurationWrapper>().To<ConfigurationWrapper>();
+            Bind<IPathResolver>().To<PathResolver>();
+            Bind<IAccessTokenManager>().To<AccessTokenManager>();
         }
     }
 }
