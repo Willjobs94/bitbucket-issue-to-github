@@ -49,4 +49,5 @@ namespace BitBucketToGithub.Test
             Assert.That(secret, Is.EqualTo("GithubSecret"));
         }
     }
+
 }
